@@ -71,14 +71,9 @@ int main() {
          done by the gawk(1) code inside the networking part in oui.sh
   */
 
-  /* 
-   *  grab the response 64K chunks at a time 
-   */
-  while (1) {
-    read = fread(&buf, 1, CHK_SIZ, http_stream);
-    if (read == 0) break;
+  /*  grab the response 'CHK_SIZ' chunks at a time */
+  while ((read = fread(&buf, 1, CHK_SIZ, http_stream)) > 0)
     fwrite(&buf, read, 1, oui); 
-  }
   
   fclose(oui);
   close(s); 
