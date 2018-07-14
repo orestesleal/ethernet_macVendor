@@ -1,4 +1,4 @@
-  # A combination or sed(1), gawk(1) and C program for parsing ethernet MAC addresses from a file and lookup the vendor.
+  # A combination or sed(1), gawk(1) and a C program for parsing Ethernet MAC addresses from a file and lookup the vendor of the chip
 
   oui.sh is the driving script, it accepts 2 arguments, the 
   2nd is optional, the first is the file where the mac 
