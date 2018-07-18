@@ -17,4 +17,11 @@
   all is done the OUIs on the input mac file will be matched
   against the OUIs in the oui.txt file to find the vendor.
 
+  NOTE: this small hobby project is developed on FreeBSD 11.2
+        for that reason the http client in C might not build
+        or work on any other unix-like OS since it make uses
+        of at least one FreeBSD specific flag for getaddrinfo(2)
+        I plan to fix this soon, it works, however in OpenBSD
+        and NetBSD but not on Linux.
+
   Orestes Leal Rodriguez, 2018 <olealrd1981@gmail.com>
